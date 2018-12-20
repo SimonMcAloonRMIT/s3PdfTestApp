@@ -100,7 +100,7 @@ app.post("/createPDFHtmlPdfNew", (req, res, next) => {
           .pipe(file)
           .on('finish', function() {
             this.emit('downloadComplete');
-            //console.log('download competed.')
+            console.log('download competed.')
           });
     }
 
@@ -139,7 +139,7 @@ app.post("/createPDFHtmlPdfNew", (req, res, next) => {
             fs.unlink(__dirname + "/cache/" + filename, function (err) {
                 if (err) throw err;
                 // if no error, file has been deleted successfully
-                //console.log('File deleted!');
+                console.log('File deleted!');
             }); 
         }    
         util.log('Deleting cache files COMPLETE!');
